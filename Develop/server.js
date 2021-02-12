@@ -16,3 +16,6 @@ mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useFindAndModify: false,
 });
+
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
