@@ -1,8 +1,8 @@
-const { model } = require("mongoose");
-const Workout = require("../models/workout");
+const db = require("../models/workout.js");
+const router = require("express").Router();
 
 model.exports = function (app) {
-  app.get("/api/workouts", function (req, res) {
+  app.get("./public/api/workouts", function (req, res) {
     Workout.find()
       .then((data) => {
         res.json(data);
@@ -11,14 +11,14 @@ model.exports = function (app) {
         res.json(err);
       });
   });
-  app.post("/api/workouts", function (req, res) {
+  app.post("./public/api/workouts", function (req, res) {
     Workout.create({})
       .then((data) => res.json(data))
       .catch((err) => {
         res.json(err);
       });
   });
-  app.get("/api/workouts/range", function (req, res) {
+  app.get("./public/api/workouts/range", function (req, res) {
     Workout.find()
       .then((data) => {
         res.json(data);
@@ -27,7 +27,7 @@ model.exports = function (app) {
         res.json(err);
       });
   });
-  app.post("/api/workouts/range", function (req, res) {
+  app.post("./public/api/workouts/range", function (req, res) {
     Workout.create({})
       .then((data) => res.json(data))
       .catch((err) => {
@@ -35,7 +35,7 @@ model.exports = function (app) {
       });
   });
 
-  app.put("/api/workouts/:id", ({ body, params }, res) => {
+  app.put("./public/api/workouts/:id", ({ body, params }, res) => {
     Workout.findByIdAndUpdate(
       params.id,
       { $push: { exercises: body } },
@@ -47,3 +47,4 @@ model.exports = function (app) {
       });
   });
 };
+module.exports = router;
