@@ -1,5 +1,5 @@
 const { model } = require("mongoose");
 
 model.exports = {
-  Workout: require("./workout.js"),
+  Workout: require("./workout"),
 };
