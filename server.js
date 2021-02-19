@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gym-app34", {
   useFindAndModify: false,
 });
 
-const db = require("../models");
+//const db = require("./models");
 
 // routes
 app.use(require("./routes/apiRoutes"));
