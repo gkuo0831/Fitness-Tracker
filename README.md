@@ -10,6 +10,9 @@ A consumer will reach their fitness goals more quickly when they track their wor
 
 ## Links
 
+https://gym-app34.herokuapp.com
+https://github.com/gkuo0831/Fitness-Tracker
+
 https://github.com/gkuo0831/Fitness-Tracker
 
 ![Screen Shot 2021-02-16 at 8 23 04 PM](https://user-images.githubusercontent.com/68671968/108151844-dff86200-7094-11eb-8edc-131429f5db98.png)
